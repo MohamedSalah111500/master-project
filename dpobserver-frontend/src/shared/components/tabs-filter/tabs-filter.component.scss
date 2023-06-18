@@ -1,0 +1,16 @@
+@import "src/scss/abstracts/variables";
+
+.tabs-filter-container {
+    .filter-tab {
+                font-size: 16px;
+        margin: 0px 0 10px;
+        margin-right: 1.5rem;
+        padding: 5px 0;
+        color: $primary;
+        cursor: pointer;
+        transition: 0.3s all;
+        &.active {
+           border-bottom:3px solid $primary;
+        }
+    }
+}

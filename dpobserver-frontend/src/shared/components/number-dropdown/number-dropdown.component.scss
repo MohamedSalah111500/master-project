@@ -1,0 +1,71 @@
+@import "src/scss/abstracts/variables";
+.number-dropdown {
+  margin-top: 20px;
+  .form-group {
+    display: inline;
+    label {
+      color: $mirage_color;
+      font-weight: 700;
+      font-size: 16px;
+      display: block;
+      margin-bottom: 8px;
+      text-transform: capitalize;
+    }
+    .input-parent {
+      position: relative;
+      display: inline;
+      top: 1px;
+      &::before {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        background-color: #98a2b3;
+        z-index: 7;
+        left: 45%;
+        top: 0;
+      }
+      &::after {
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f078";
+        position: relative;
+        right: 22px;
+        font-size: 12px;
+
+      }
+      input {
+        padding: 7px;
+        width: 67px;
+        border: 1px solid #98a2b3;
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 14px;
+        position: relative;
+        top: 1px;
+        outline: none;
+        background-color: #98a2b300;
+        border: 1px solid #ced4da;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    }
+  }
+  .btn {
+    padding: 9px 100px;
+    font-weight: 700;
+    font-size: 18px;
+    background: $main_color;
+
+    border-radius: 8px !important;
+  }
+}

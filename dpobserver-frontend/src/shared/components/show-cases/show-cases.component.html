@@ -1,0 +1,63 @@
+<header></header>
+
+<div class="container-fluid">
+  <!--slider -->
+  <!--Category  -->
+  <div class="title-bar">
+    <div class="text-container">
+      <span class="small-title">Category</span>
+      <h2 class="big-title">Shop by Category</h2>
+    </div>
+    <div class="btn-container d-none d-sm-block">
+      <button class="btn main-btn">See all</button>
+    </div>
+  </div>
+  <div class="row">
+    <div
+      class="col-sm-6 col-md-4 col-lg-3 col-xl-2"
+      *ngFor="let card of HoverCards; index as i"
+    >
+      <hover-card [card]="card"></hover-card>
+    </div>
+  </div>
+  <!--see all in small screen-->
+  <div class="btn-container mt-3 d-block d-sm-none text-center">
+    <button class="btn main-btn" style="width: 150px">See all</button>
+  </div>
+
+  <div class="hr"></div>
+
+  <!--Best Seller  -->
+  <div class="title-bar">
+    <div class="text-container">
+      <span class="small-title">Our Products</span>
+      <h2 class="big-title">Best Seller</h2>
+    </div>
+    <div class="btn-container d-none d-sm-block">
+      <button class="btn main-btn">See all</button>
+    </div>
+  </div>
+  <div class="row">
+    <!-- <div
+      class="col-sm-6 col-md-4 col-lg-3 col-xl-2"
+      *ngFor="let card of cards; index as i"
+    >
+      <action-card [card]="card"></action-card>
+    </div> -->
+  </div>
+  <!--see all in small screen-->
+  <div class="btn-container mt-3 d-block d-sm-none text-center">
+    <button class="btn main-btn" style="width: 150px">See all</button>
+  </div>
+
+  <div class="hr"></div>
+  <!--Our Features  -->
+  <div class="title-bar">
+    <div class="text-container">
+      <span class="small-title">What we can we provide ?</span>
+      <h2 class="big-title">Our Features</h2>
+    </div>
+    <div class="btn-container"></div>
+  </div>
+
+</div>

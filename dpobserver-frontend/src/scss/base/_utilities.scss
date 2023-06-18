@@ -1,0 +1,160 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.fw-1 {
+    font-weight: 100;
+}
+.fw-2 {
+    font-weight: 200;
+}
+.fw-3 {
+    font-weight: 300;
+}
+.fw-4 {
+    font-weight: 400;
+}
+.fw-5 {
+    font-weight: 500;
+}
+.fw-6 {
+    font-weight: 600;
+}
+.fw-7 {
+    font-weight: 700;
+}
+.fw-8 {
+    font-weight: 800;
+}
+.fw-9 {
+    font-weight: 900;
+}
+.pd25 {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.text-end {
+    text-align: end;
+}
+
+.border-b-1 {
+    border-bottom: 1px solid #c0c0c0;
+}
+.cursor-poin {
+    cursor: pointer;
+}
+.width-90{
+  width: 90% !important;
+}
+.button-style{
+  background: linear-gradient(90deg, #006450 0%, #1da78b 100%);
+  color: white;
+  font-weight: 400;
+  border: 0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 1rem #00645036;
+  height: 35px;
+  line-height: 0;
+}
+.stickyHeader {
+    position: fixed;
+    z-index: 2;
+    right: 0;
+    width: calc(100% - 70px);
+}
+.navTransition {
+    transition-duration: 400ms;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-property: width , right;
+}
+
+.background-white {
+    background-color: $white-color;
+}
+
+
+    @include bp-max-width() {
+        .background-nav-scroll {
+        background-color: $white-color;
+        transition: 0.3s all;
+        .icon {
+            svg {
+                fill: $primary-color !important;
+            }
+            &::after {
+                background-color: $grey-color !important;
+            }
+        }
+        .menu-icon {
+            svg {
+                stroke: $primary-color !important;
+            }
+        }
+    }
+}
+
+.background-shadow {
+    box-shadow: 0 0 20px 0 $shadow-card;
+}
+
+%flex-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+// general classes
+
+.section_title{
+    
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 24px;
+
+        span{
+            font-size: 14px;
+            font-weight: 100;
+            color: $primary-light3;
+        }
+
+}
+
+//for error text
+.error {
+    color: $error-color;
+}
+
+.breadcrumbs-wrapper {
+    z-index: 1;
+    position: relative;
+}
+
+    @include bp-max-width() {
+        .padding-t-sm {
+
+        padding-top: 50px;
+    }
+
+    }
+
+    @include bp-max-width() {
+
+.pdx-md {
+         padding-left: 8px;}
+    }
+
+
+
+

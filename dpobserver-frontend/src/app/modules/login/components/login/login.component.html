@@ -1,0 +1,57 @@
+
+
+<div class="row ">
+  <div class="col-12 ">
+    <div class="wrapper-card">
+      <div class="header">
+
+        <h4>Login</h4>
+      </div>
+     
+      <form [formGroup]="loginForm" class="needs-validation" (ngSubmit)="onSubmit()" >
+
+        <!-- // form control start ------> 
+        <div class="form-group mb-3">
+          <label class="form-label" id="email"> Email</label>
+          <input
+            type="text"
+            class="form-control"
+            [class.is-valid]="helpersFunction.isControllerValid(loginForm,'email')"
+            [class.is-invalid]="helpersFunction.controllerNotValidAndDirty(loginForm,'email')"
+            formControlName="email"
+            placeholder="Entre your email"
+            id="email"
+          />
+          <div class="invalid-feedback" *ngIf="helpersFunction.getErrorByController(loginForm,'email','email')">
+             this is not valid email
+          </div>
+        </div>
+  
+         <!-- // form control start ------> 
+        
+         <div  class="form-group mb-3" >
+          <input-toggle-password formControlName="password" [valid]="helpersFunction.isControllerValid(loginForm,'password')" ></input-toggle-password>
+          <div  class="text-danger mt-1 small " *ngIf="helpersFunction.controllerNotValidAndDirty(loginForm,'password')">
+            Password must at lest  6 characters long.
+            </div>
+         </div>
+
+          <div class="form-group text-end">
+            haven't account yet ?
+          <a class="forgot-password " routerLink="/auth/signup">
+            create one
+          </a>
+        </div>
+        <button
+          type="submit"
+          class="btn  w-100 mx-0 mt-3 submit-btn d-block"
+        >
+        Login
+        <span *ngIf="loading">Loading ...</span>
+        </button>
+      </form>
+    </div>
+
+  </div>
+</div>
+

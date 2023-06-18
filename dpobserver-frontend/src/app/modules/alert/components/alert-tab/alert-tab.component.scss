@@ -1,0 +1,55 @@
+@import "src/scss/abstracts/variables";
+
+.alert-tab-wrapper {
+  padding: 10px;
+  border-bottom: 1px solid $primaryGrey;
+  border: 1px solid rgb(217, 221, 228);
+  border-bottom: 0;
+
+  &:hover,
+  &.active {
+    background-color: $primary-light4;
+    cursor: pointer;
+  }
+
+  .info {
+    width: 70%;
+    .title {
+      font-size: 12px;
+      margin-block: 2px;
+
+      strong {
+        font-size: 15px;
+      }
+    }
+    .location {
+      font-size: 14px;
+      margin-block: 2px;
+    }
+    .description {
+      font-size: 10px;
+      margin-block: 0;
+      color: $primary-light6;
+    }
+    .danger{
+        font-size: 12px;
+        font-weight: bold;
+        margin-block: 0;
+        color: $primary;
+      }
+  }
+
+  .driver {
+    text-align: center;
+    .name {
+      font-size: 12px;
+      margin-block: 5px;
+
+    }
+    img {
+      width: 65px;
+      border-radius: 7px;
+      border: 1px solid $primaryGrey;
+    }
+  }
+}

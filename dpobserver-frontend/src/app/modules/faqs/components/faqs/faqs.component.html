@@ -1,0 +1,49 @@
+<div class="container">
+  <!-- <h1>faq working fine !</h1> -->
+  <div class="main-title">
+    <span> support </span>
+    <h2 class="title">Frequently asked questions</h2>
+    <p class="description">
+       faqData.frequentlyAskedQuestions 
+    </p>
+  </div>
+
+  <!-- section one -->
+  <div class="customer row">
+    <div class="col-lg-6">
+      <h2 class="customer-title">Customer Mangment</h2>
+      <ng-container >
+        <div class="info">
+          <div class="item" *ngFor="let item of questions; index as i">
+            <ng-container >
+              <div class="title">
+                <span class="icon">
+                  <img src="assets/images/faq/info-icon.png" alt=""
+                /></span>
+                <h3 class="text">{{ item.question }}</h3>
+              </div>
+              <p class="description">
+                {{ item.answer }}
+              </p>
+            </ng-container>
+          </div>
+        </div>
+      </ng-container>
+      <!-- loader -->
+    </div>
+
+    <div class="col-lg-6">
+      <ng-container >
+        <div class="imageContainer">
+          <img class="img-fluid"
+          src="https://miro.medium.com/max/1200/1*p3DvHm-2ANdM5fUkI7ce7Q.png"
+          alt="this is a image"
+        />
+        </div>
+      </ng-container>
+
+    </div>
+  </div>
+
+ 
+</div>

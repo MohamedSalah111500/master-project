@@ -1,0 +1,35 @@
+<section class="notifications">
+  <div class="notifincation-title">
+    <h2>Notification</h2>
+  </div>
+  <div class="body">
+    <!-- group -->
+      <div class="notification-group mt-3">
+        <div
+          class="row item"
+          *ngFor="let item of notifications; index as i"
+        >
+          <!-- img -->
+          <div class="col-2">
+            <div class="img-container">
+              <!-- <i class="fa fa-location-dot"></i> -->
+              <img
+                src="../../../../assets/images/notifications/rang.png"
+                alt=""
+              />
+            
+            </div>
+          </div>
+          <!--Info-->
+          <div class="col-10">
+            <div class="notification-info">
+              <h2 class="title">{{ item.title }}</h2>
+              <!-- <p class="time">{{ item.time }}</p> -->
+              <p class="description">{{ item.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</section>

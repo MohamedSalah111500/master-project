@@ -1,0 +1,127 @@
+@import "./colors";
+
+$primary-color: $primary;
+$primary-color3:$primaryLigh3;
+$primary-color-dark: $primaryDark;
+$primary-dark-color: $secondaryOceanGreen;
+$primary-gray: $primaryGrey;
+$primary-light: $primaryLight;
+$primary-light2: $primaryLigh2;
+$primary-light3:$primaryGrey3;
+$primary-light4:$primaryGrey4;
+$primary-light5:$primaryGrey5;
+$primary-light6:$primaryGrey6;
+$gray-light1:$sim_white_color;
+
+$primary-warning:$Warning400;
+$independence_color: $independence_color;
+
+$red-light1:$red1;
+
+$primary-gray-opacity: $primaryGreyOpacity;
+
+$primary-light-color: $bGLightGreen;
+$primary-light-color2:$primaryGrey2;
+$secondary-2-color: $buttonYellowDark;
+$secondary-light-color: $buttonYellowLight;
+
+$grey-color: $primaryGrey;
+$grey-light-color: $lightGrey;
+$grey-dark-color: $darkGrey;
+
+$white-color: $white;
+
+$purple-dark-color: #291439;
+$purple-dark-2-color: #362045;
+
+$orange-color: #c7683e;
+$orange-dark-color: #bf643a;
+
+$green-light-color: $bGLightGreen;
+$green-2-color: #229a7d;
+
+$overlay-color: #d0b37ed4;
+$bck-color: #c7683e;
+
+$upload-color: #fffdfa;
+
+// background
+$background-color: $bGColor;
+// footer
+$footer-color: #fffdfa;
+
+// text
+$text-color: #23292f;
+$text-medium-color: #bdbdbd;
+$text-light-color: #ccccca;
+$text-subtitle:$darkwhite;
+// states
+$success-color: $primary-color;
+$success-icon: $primary-color;
+$success-background: $alertSuccess;
+
+$error-color: #b06b6b;
+$error-background: $alertError;
+
+$warning-color: #997c47;
+$warning-background: $alertWarning;
+
+$info-color: #7e89a9;
+$info-icon: #789cff;
+$info-background: #c0ebf6;
+
+// slider item
+$slider-bck-color: #fff9f0;
+// borders
+$border-color: #f4f4f4;
+
+// multi card
+$bord-color: rgba(228, 231, 236, 0.54);
+$category-color: #768897;
+
+// paginator
+$paginator_bg: #f7f3eb;
+
+// gradient
+// $gradient-primary-start: #009496;
+// $gradient-primary-end: #01ad7d;
+// $gradient-primary-dark-start: #026f71;
+// $gradient-primary-dark-end: #03986f;
+
+$gradient-primary-start: #d0b37e;
+$gradient-primary-end: #eacc94;
+$gradient-primary-dark-start: #b89c6a;
+$gradient-primary-dark-end: #f7deb1;
+
+/**
+* Media Breakpoints Sizes:
+* - Sm-Mobile from 320px --> 460px
+* - Lg-Mobile from 460 --> 768px
+* - Tablet from 768px --> 1024px
+* - Desktop from 1024px --> 1366px and more
+*/
+$bp-sm-mobile-min: 320px;
+$bp-sm-mobile-max: 760px;
+$bp-lg-mobile-max-tablet-min: 768px;
+$bp-max-tablet: 992px;
+$bp-tablet-max: 1024px;
+$bp-desktop-min: 1200px;
+
+//margin
+$margin-top-neg-90: -90px;
+//padding
+$padding-xlarge: 5.5rem;
+$padding-large: 13rem;
+$padding-medium: 8rem;
+$padding-xmedium: 3rem;
+$padding-small: 3.5rem;
+$padding-xsmall: 0.5rem;
+
+$paddint-5rem: 5rem;
+
+// shadows
+$shadow-black: rgba(0, 0, 0, 0.08);
+$shadow-card: $cardShdow;
+
+//overlay
+$overlay-dark-color: rgba(29, 29, 27, 0.7);

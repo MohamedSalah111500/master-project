@@ -1,0 +1,79 @@
+@import "src/scss/abstracts/variables";
+
+.alert-details-wrapper {
+  .alert-details,
+  .alert-item {
+    background-color: $white-color;
+    border: 1px solid rgb(217, 221, 228);
+    padding: 20px;
+
+    .info {
+      width: 70%;
+      .title {
+        font-size: 16px;
+        margin-block: 2px;
+
+        strong {
+          font-size: 22px;
+        }
+      }
+      .location {
+        font-size: 16px;
+        margin-block: 2px;
+      }
+      .description {
+        font-size: 14px;
+        margin-block: 0;
+        color: $primary-light6;
+      }
+      .danger {
+        font-size: 14px;
+        margin-block: 0;
+        color: $primary;
+        font-weight: bold;
+      }
+    }
+
+    .driver {
+      text-align: center;
+      .name {
+        font-size: 16px;
+        margin-block: 5px;
+      }
+      img {
+        width: 140px;
+        border-radius: 7px;
+        border: 1px solid $primaryGrey;
+      }
+    }
+  }
+  .order-item {
+    margin-top: 20px;
+    border-top: none;
+  }
+  .patrolBlock {
+    display: flex;
+    background-color:rgb(245 246 247);
+    justify-content: space-between;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px 10px 10px 0px;
+    cursor:pointer;
+    align-items: center;
+    .name {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0;
+    }
+    .status {
+      font-size: 12px;
+      margin: 0;
+      color: $primary;
+    }
+  }
+  .alert-item{
+    .info{
+        width: 100%;
+    }
+  }
+}

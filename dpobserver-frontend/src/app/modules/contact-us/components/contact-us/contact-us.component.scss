@@ -1,0 +1,158 @@
+@import "src/scss/abstracts/variables";
+.contact-us {
+  .main-title {
+    text-align: center;
+    margin: 50px 0;
+    .litle-title {
+      color: $royal_azure_color;
+      font-weight: 600;
+      font-size: 16px;
+    }
+    .title {
+      color: $mirage_color;
+      font-weight: 600;
+      font-size: 48px;
+    }
+    .description {
+      color: $gull_gray_color;
+      font-weight: 400;
+      font-size: 20px;
+    }
+  }
+
+  .cards {
+    .card {
+      margin-top: 20px;
+      cursor: pointer;
+      border: none;
+      min-height: 320px;
+      border-radius: 6px;
+      box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 48px 10px;
+      transition: all 0.1s ease-in-out;
+      .icon {
+        margin: 20px auto;
+        padding: 10px;
+        background: $blue_crayola_color;
+        border-radius: 50%;
+        color: $white_color;
+        font-size: 15px;
+        width: 38px;
+        height: 38px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .icon {
+          font-size: 16px;
+        }
+      }
+      .title {
+        font-weight: 600;
+        font-size: 24px;
+        color: $erie_black_color;
+        text-transform: capitalize;
+        margin-bottom: 10px;
+      }
+      .description {
+        color: $independence_color;
+        font-weight: 400;
+        font-size: 18px;
+        &:first-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .activeCard {
+      background: $blue_crayola_color !important;
+      * {
+        color: $white_color !important;
+      }
+      .icon {
+        background: $white_color !important;
+        color: $blue_crayola_color !important;
+      }
+    }
+  }
+
+  .getInTouch {
+    margin-top: 8rem;
+    .form {
+      .title {
+        h2 {
+          font-weight: 600;
+          font-size: 40px;
+          color: $mirage_color;
+        }
+        p {
+          color: $charcoal_color;
+          font-weight: 400;
+          font-size: 20px;
+        }
+      }
+
+      .form-group {
+        margin-top: 20px;
+        .form-label {
+          font-weight: 500;
+          font-size: 14px;
+          color: $charcoal_color;
+          text-transform: capitalize;
+        }
+        .form-control {
+          padding: 0.5rem;
+        }
+        .textarea {
+          min-height: 100px;
+          max-height: 150px;
+        }
+      }
+
+      .form-error {
+        color: $danger_color;
+        margin-top: 7px;
+        display: block;
+        font-size: 13px;
+      }
+
+      .checkbox {
+        display: flex;
+        align-items: center;
+        input {
+          width: 17px;
+          height: 17px;
+        }
+        .privacy {
+          margin-bottom: 0;
+          font-weight: 400;
+          font-size: 15px;
+          color: $independence_color;
+          margin-inline-start: 10px;
+          a {
+            text-decoration: underline;
+            color: $charcoal_color;
+          }
+        }
+      }
+      .btn {
+        display: inline-block;
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+    .imgContainer {
+      width: 100%;
+      height: 620px;
+      padding-inline-start: 30px;
+      @media (max-width: 1200px) {
+        padding: 0;
+        margin-top: 5rem;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+    }
+  }
+}

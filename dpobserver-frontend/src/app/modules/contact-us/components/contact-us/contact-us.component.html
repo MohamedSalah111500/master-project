@@ -1,0 +1,169 @@
+<section class="contact-us">
+  <div class="container">
+    <!-- main title -->
+    <div class="main-title">
+      <span class="litle-title"> Contact us </span>
+      <h2 class="title">How to communicate with us</h2>
+      <p class="description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
+      </p>
+    </div>
+
+    <!-- cards section -->
+    <div class="cards row">
+
+      <!-- loader -->
+      <ng-container *ngIf="isLoading">
+        <div class="row">
+          <div class="col-sm-12 col-md-4" *ngFor="let i of [1, 2, 3]">
+            <div>
+              <ngx-skeleton-loader
+                [theme]="{
+                  height: '300px'
+                }"
+              ></ngx-skeleton-loader>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+
+    <!-- Get In Touch -->
+    <div class="getInTouch row">
+      <div class="col-lg-5">
+        <div class="form">
+          <div class="title">
+            <h2>Get in touch</h2>
+            <p>Our friendly team would love to hear from you.</p>
+          </div>
+          <form [formGroup]="contactUsForm">
+            <div class="row">
+              <!--  name -->
+              <div class="col-12">
+                <div class="form-group">
+                  <label class="form-label"> Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="First Name"
+                    formControlName="name"
+                  />
+                </div>
+                <div *ngIf="isSubmitted && f['name'].errors">
+                  <span class="form-error" *ngIf="f['name'].errors['required']">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    This field is required
+                  </span>
+                </div>
+              </div>
+
+              <!-- subject -->
+              <div class="col-12">
+                <div class="form-group">
+                  <label class="form-label">subject</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Last Name"
+                    formControlName="subject"
+                  />
+                </div>
+                <div *ngIf="isSubmitted && f['subject'].errors">
+                  <span
+                    class="form-error"
+                    *ngIf="f['subject'].errors['required']"
+                  >
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    This field is required
+                  </span>
+                </div>
+              </div>
+
+              <!-- phone number -->
+              <div class="col-12">
+                <div class="form-group">
+                  <label class="form-label">phone number</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Last Name"
+                    formControlName="phoneNumber"
+                  />
+                </div>
+                <div *ngIf="isSubmitted && f['phoneNumber'].errors">
+                  <span
+                    class="form-error"
+                    *ngIf="f['phoneNumber'].errors['required']"
+                  >
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    This field is required
+                  </span>
+                </div>
+              </div>
+
+              <!-- message-->
+              <div class="col-12">
+                <div class="form-group">
+                  <label class="form-label">message</label>
+                  <textarea
+                    class="form-control textarea"
+                    placeholder="Leave us a message..."
+                    formControlName="description"
+                    minlength="3"
+                    maxlength="300"
+                  ></textarea>
+                </div>
+                <div *ngIf="isSubmitted && f['description'].errors">
+                  <span
+                    class="form-error"
+                    *ngIf="f['description'].errors['required']"
+                  >
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    This field is required
+                  </span>
+                  <span
+                    class="form-error"
+                    *ngIf="f['description'].errors['minlength']"
+                  >
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                    Description must be between 5 and 300 characters
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- On submit -->
+            <button class="btn main-btn" type="button" (click)="onSubmit()">
+              Send message
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <ng-container *ngIf="!isLoading">
+          <div class="imgContainer">
+            <img class="img-fluid"
+            src="https://miro.medium.com/max/1200/1*p3DvHm-2ANdM5fUkI7ce7Q.png"
+            alt="this is a image"
+          />
+          </div>
+        </ng-container>
+
+        <!-- loader -->
+        <ng-container *ngIf="isLoading">
+          <div class="row">
+            <div class="col-sm-12">
+              <div>
+                <ngx-skeleton-loader
+                  [theme]="{
+                    height: '600px'
+                  }"
+                ></ngx-skeleton-loader>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</section>

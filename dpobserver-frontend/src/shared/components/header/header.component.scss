@@ -1,0 +1,154 @@
+@import "src/scss/abstracts/variables";.carouselBody {
+  // margin-top: -3rem;
+  margin-bottom: 60px;
+  position: relative;
+  margin-top: -6rem;
+  .slick-list {
+    z-index: 999;
+  }
+
+  .slide {
+    position: relative;
+    left: 0;
+    height: 100% !important;
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+    .header-info {
+      position: absolute;
+      z-index: 9;
+      top: 38%;
+      left: 7%;
+      width: 40%;
+      z-index: 99;
+      @media (max-width: 991px) {
+        width: 90%;
+      }
+      .form-control {
+        padding: 1.1rem 0.75rem;
+      }
+      .title {
+        font-weight: 700;
+        font-size: 51px;
+        color: $dark_color;
+        @media (max-width: 767px) {
+          font-size: 30px;
+        }
+        @media (max-width: 991px) {
+          font-size: 40px;
+        }
+        .highlight {
+          color: $orange_color;
+        }
+      }
+      .poster {
+        color: $pale_sky_color;
+        font-weight: 400;
+        font-size: 28px;
+        margin: 20px 0;
+      }
+
+      form {
+        .form-group {
+          width: 70%;
+          position: relative;
+          @media (max-width: 767px) {
+            width: 90%;
+          }
+          input {
+            padding-inline-start: 35px;
+            height: 47px;
+          }
+          .icon {
+            position: absolute;
+            margin-right: auto;
+            left: 10px;
+            color: $pale_sky_color;
+          }
+          .btn {
+            padding: 7px 18px !important;
+            margin-inline-start: 9px;
+          }
+        }
+      }
+    }
+  }
+
+  .buttons {
+    button {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: none;
+      @media (max-width: 767px) {
+        display: none;
+      }
+      i {
+        color: #333333;
+      }
+    }
+    .btn-prev {
+      position: absolute;
+      top: 47%;
+      z-index: 99;
+      left: 40px;
+      transform: translate(-50%, -50%);
+      background: #fff;
+      padding-inline-end: 10px;
+      box-shadow: 0px 1px 3px #e2dbdb29;
+    }
+
+    .btn-next {
+      position: absolute;
+      top: 47%;
+      z-index: 99;
+      right: 0;
+      transform: translate(-50%, 0);
+      background: #fff;
+      padding-inline-start: 10px;
+      box-shadow: 0px 1px 3px #e2dbdb29;
+    }
+  }
+
+  ::ng-deep .slick-slide {
+    height: 100vh;
+    .imgContainer {
+      height: 100vh;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin-inline-start: auto;
+        @media (max-width: 991px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  ::ng-deep .slick-dots {
+    background: rgba(255, 255, 255, 0.54);
+    width: auto;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background: #fdfdfd;
+    width: auto;
+    left: 50%;
+    padding: 6px 10px 10px;
+    border-radius: 22px;
+    z-index: 9;
+    margin-bottom: 21px;
+    position: absolute;
+    bottom: 0;
+    li button:before {
+      font-size: 14px !important;
+      color: $main_color !important;
+    }
+  }
+}

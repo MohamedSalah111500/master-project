@@ -1,0 +1,83 @@
+{
+  "HEADER": {
+    "About": "About Gazt",
+    "MediaCenter": {
+      "MediaCenter": "Media Center",
+      "news": "news",
+      "internalnews":"Internal News",
+      "announcements": "Announcements",
+      "media": "media",
+      "Details": "Details",
+      "GAZT_MAGAZINE": "GAZT Magazine"
+    },
+    "eLibrary": {
+      "eLibrary": "eLibrary",
+      "DOCUMENTS_LIBRARY": "Documents Library"
+    },
+    "GaztAcademy": {
+      "GaztAcademy": "Gazt Academy",
+      "offers": "offers",
+      "academy": "academy"
+    },
+    "KnowledgeBase": {
+      "KnowledgeBase": "Knowledge Base",
+      "knowledge": "knowledge"
+    },
+    "searchPlaceholder": "What are you looking for?"
+  },
+  "HOME": {
+    "HOME": "HOME",
+    "Print": "Print",
+    "Share": "Share",
+    "Favorite": "Favorite",
+    "unFavorite": "Un Favorite",
+    "FullDetails": "Full Details",
+    "Welcome": "Welcome",
+    "LatestUpdates": "Latest Updates",
+    "OurEvents": "Our Events",
+    "Showing": "Showing",
+    "ShowMore": "Show more",
+    "of": "of",
+    "DAILY_QUOTES": "Daily Quotes"
+  },
+  "NEWS": {
+    "news": "news",
+    "newsCute": "We're here to help whenever you need us...",
+    "placeholder": "Search for news here !",
+    "LatestNews": "Latest News",
+    "FavoriteNews": "Favorite News",
+    "noFavoriteNews": "There is no favorite Internal News yet"
+  },
+  "INTERNALNEWS": {
+    "FavoriteINTERNALNEWS": "Favorite Internal News",
+    "AllINTERNALNEWS": "All Internal News"
+  },
+
+  "ANNOUNCEMENTS": {
+    "ANNOUNCEMENTS": "Announcements",
+    "placeholder": "Search for Announcements here !",
+    "Latest": "Latest Announcements",
+    "Favorite": "Favorite Announcements",
+    "Attachements": "Attachements"
+  },
+  "NoResultFound": {
+    "NoResultFound": "No Result Found",
+    "Sorry": "Sorry, there are no result for this search , Please try another keyword",
+    "Clear": "Clear the search",
+    "OR": "OR"
+  },
+  "INTERNAL_NEWS": "Internal News",
+  "LATEST": "Latest",
+  "MAGAZINE": {
+    "GAZT_MAGAZINE": "GAZT Magazine",
+    "SEARCH_PLACEHOLDER": "Describe your issue !",
+    "LAST_UPDATE_ON": "The last update on",
+    "ISSUE_YEAR": "Issue Year",
+    "ISSUE": "Issue"
+  },
+  "DOCUMENT_LIBRARY": {
+    "DOCUMENT_LIBRARY": "Document Library",
+    "LAST_UPDATE_ON": "The last update on",
+    "SEARCH_PLACEHOLDER": "Describe your issue !"
+  }
+}

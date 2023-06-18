@@ -1,0 +1,7 @@
+<div class="tabs-filter-container d-flex"  >
+    <div class="filter-tab" *ngFor="let tab of tabs" [ngClass]="{'active': tab?.id === activeTab}"
+    (click)="tabClick(tab?.id)">
+        {{tab?.name }}
+    </div>
+  
+</div>

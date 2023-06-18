@@ -1,0 +1,91 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#"
+      ><img src="assets/images/dp-logo.png" alt="" class="logo-img"
+    /></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ng-container *ngFor="let item of navItems">
+          <li
+            class="nav-item"
+            *ngIf="item.showTab || (!item.showTab && authService.isLoggedIn())"
+          >
+            <a
+              class="nav-link"
+              routerLinkActive="active"
+              [routerLink]="item.routerLink"
+              aria-current="page"
+              href="#"
+              >{{ item.title }}</a
+            >
+          </li>
+        </ng-container>
+      </ul>
+      <div class="form">
+        <!--Search input form -->
+        <!-- <form>
+          <div class="form-group d-flex align-items-center">
+            <input type="search" class="form-control" placeholder="Search" />
+            <i class="icon fa-solid fa-magnifying-glass"></i>
+          </div>
+        </form> -->
+
+        <!-- authinticaiton buttons-->
+        <div class="auth-buttons" *ngIf="!authService.isLoggedIn()">
+          <button class="btn btn-outline" routerLink="/auth">
+            <span>Login</span>
+          </button>
+          <button class="btn main-btn" routerLink="/auth/signup">
+            <span>Sign up</span>
+          </button>
+        </div>
+
+        <!-- notification cart procile buttons-->
+        <div class="notification-cart-profile" *ngIf="authService.isLoggedIn()">
+          <!-- notification btn -->
+          <button class="notification-btn" (click)="onNotifactionClick($event)">
+            <img src="assets/images/nav/bell.png" alt="bell" />
+            <small class="red-noti"></small>
+            <div class="notification-dropdwon" *ngIf="showNotifications">
+              <app-notifications
+                [notifications]="notifications"
+              ></app-notifications>
+            </div>
+          </button>
+
+          <!-- user btn -->
+          <button
+            class="user-btn"
+            mat-icon-button
+            [matMenuTriggerFor]="menu"
+            aria-label="Example icon-button with a menu"
+          >
+            <img [src]="userData?.image" alt="user" />
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <i class="bi bi-person-fill"></i>
+              <span>Profile details</span>
+            </button>
+
+            <button mat-menu-item (click)="logOut()">
+              <mat-icon disabled style="color: #f00">logout</mat-icon>
+              <span style="color: #f00">logout</span>
+            </button>
+          </mat-menu>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

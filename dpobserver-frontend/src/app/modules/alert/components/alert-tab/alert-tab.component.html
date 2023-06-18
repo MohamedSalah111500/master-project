@@ -1,0 +1,30 @@
+<div
+  class="alert-tab-wrapper d-flex justify-content-between"
+  [class.active]="activeAlertId === alert.id"
+  (click)="alertClick()"
+>
+  <div class="info">
+    <p class="title">
+      <alert-status
+        [status]="alert.status"
+        [progress]="alert.progress"
+        svg="false"
+      ></alert-status>
+      <strong>{{ alert?.label }} </strong>
+      {{ alert?.createdAt | date : "M/d/yy, h:mm a" }}
+    </p>
+    <p class="location">
+      {{ alert?.location }}
+      <span class="danger"> Danger {{ alert?.dangerPercentage }}%</span>
+    </p>
+    <p class="description">
+      {{ alert?.description | slice : 0 : 150 }}
+    </p>
+  </div>
+  <div class="driver">
+    <img [src]="alert?.driver.image" />
+    <p class="name">
+      {{ alert?.driver.name | slice : 0 : 100 }}
+    </p>
+  </div>
+</div>

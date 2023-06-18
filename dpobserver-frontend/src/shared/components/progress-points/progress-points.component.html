@@ -1,0 +1,7 @@
+<div class="stepper-wrapper">
+  <ng-container class="month" *ngFor="let item of numbers; let i = index">
+    <div class="stepper-item" [ngClass]="{ completed: progress >= i + 1 }">
+      <div class="step-counter"></div>
+    </div>
+  </ng-container>
+</div>

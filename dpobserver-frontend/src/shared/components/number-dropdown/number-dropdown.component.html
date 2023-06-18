@@ -1,0 +1,24 @@
+     <!--order-quantity-->
+     <div class="number-dropdown">
+        <div class="form-group">
+          <div class="input-parent">
+            <input
+              type="number"
+              min="1"
+              value="1"
+              list="number"
+              maxlength="2"
+              name="number"
+              placeholder="0"
+              (change)="selectNumber($event)"
+
+            />
+          </div>
+          <datalist id="number">
+            <option
+              *ngFor="let opt of [1, 2, 3, 4, 5]"
+              [value]="opt"
+            ></option>
+          </datalist>
+        </div>
+      </div>

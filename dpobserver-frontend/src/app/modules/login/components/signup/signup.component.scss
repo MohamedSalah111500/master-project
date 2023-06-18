@@ -1,0 +1,17 @@
+@import "../login/login.component.scss";
+@import "src/scss/abstracts/variables";
+
+.or {
+    color: $primary-gray;
+    margin: 10px;
+
+}
+
+.social-btns {
+    button {
+        width: 166px;
+        height: 48px;
+        margin: 5px;
+        border: 1px solid $primary-light-color2;
+    }
+}

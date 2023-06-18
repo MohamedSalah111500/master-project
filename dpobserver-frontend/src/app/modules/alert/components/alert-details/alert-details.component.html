@@ -1,0 +1,110 @@
+<div class="alert-details-wrapper" *ngIf="alert">
+  <div class="alert-details">
+    <div class="alert-tab-wrapper d-flex justify-content-between">
+      <div class="info">
+        <p class="title">
+          <alert-status
+            [status]="alert.status"
+            [progress]="alert.progress"
+            svg="false"
+          ></alert-status>
+
+          <strong>{{ alert?.label }} </strong>
+          {{ alert?.date | date : "M/d/yy, h:mm a" }}
+        </p>
+        <p class="location">
+          {{ alert?.location }}
+        </p>
+
+        <p class="description">
+          {{ alert?.description }}
+        </p>
+        <p class="danger">
+          <span class="text-black">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-radioactive"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1ZM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Z"
+              />
+              <path
+                d="M9.653 5.496A2.986 2.986 0 0 0 8 5c-.61 0-1.179.183-1.653.496L4.694 2.992A5.972 5.972 0 0 1 8 2c1.222 0 2.358.365 3.306.992L9.653 5.496Zm1.342 2.324a2.986 2.986 0 0 1-.884 2.312 3.01 3.01 0 0 1-.769.552l1.342 2.683c.57-.286 1.09-.66 1.538-1.103a5.986 5.986 0 0 0 1.767-4.624l-2.994.18Zm-5.679 5.548 1.342-2.684A3 3 0 0 1 5.005 7.82l-2.994-.18a6 6 0 0 0 3.306 5.728ZM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+              /></svg
+          ></span>
+           {{ alert?.dangerPercentage == 0 ? 'No Danger' : 'Danger '+ alert?.dangerPercentage +'%' }}
+        </p>
+      </div>
+      <div class="driver">
+        <img [src]="alert?.driver?.image" />
+        <p class="name">
+          {{ alert?.driver?.name | slice : 0 : 100 }}
+        </p>
+      </div>
+    </div>
+    <div class="location">
+      <h5>User location</h5>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1726.5339801544574!2d31.16948111518451!3d30.063586397472665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2seg!4v1676599452584!5m2!1sen!2seg"
+        width="100%"
+        height="200"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+
+    <div class="alert-tab-wrapper d-flex justify-content-between">
+      <div class="info mt-3">
+        <p class="location">
+             {{ alert?.car.version }}
+        </p>
+        <p class="title">
+          <strong>{{ alert?.car.type }} - {{ alert?.car.model }} </strong>
+        </p>
+       
+      </div>
+      <div class="driver">
+        <img [src]="alert?.car?.image" />
+      </div>
+    </div>
+  </div>
+
+  <div class="alert-item">
+    <div class="info">
+      <div class="title order-data d-flex justify-content-between">
+        <strong>The nearest police patrol </strong>
+      </div>
+      <div class="row">
+        <ng-container *ngFor="let patrol of patrols; index as i">
+          <div class="col-sm-6 col-md-4 col-lg-4">
+            <div class="patrolBlock">
+              <div>
+                <p class="name">{{ patrol.name }}</p>
+                <p class="status">{{ patrol.status }}</p>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-telephone-outbound-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511zM11 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V1.707l-4.146 4.147a.5.5 0 0 1-.708-.708L14.293 1H11.5a.5.5 0 0 1-.5-.5z"
+                />
+              </svg>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

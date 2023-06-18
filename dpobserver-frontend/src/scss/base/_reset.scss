@@ -1,0 +1,25 @@
+@import "./typography";
+@import "../abstracts/variables";
+
+html {
+}
+
+body {
+  p {
+    margin: 2px;
+  }
+  &.rtl {
+    direction: rtl;
+    background-color: rgba(255, 255, 255, 0);
+    .carousel-control-next {
+      right: unset;
+      left: 15px;
+    }
+  }
+}
+
+a,
+a:hover {
+  cursor: pointer;
+  text-decoration: none !important;
+}

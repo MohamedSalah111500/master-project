@@ -1,0 +1,53 @@
+<div class="alertWrapper mt-1">
+  <div class="d-flex justify-content-center">
+    <mat-spinner *ngIf="loading && !alerts"></mat-spinner>
+  </div>
+  <div class="container" *ngIf="alerts">
+    <div class="row">
+      <div class="col-12">
+        <h2> Your Alerts</h2>
+        <!-- <div class="mt-2">
+          <app-tabs-filter
+            [tabs]="filters"
+            [activeTab]="'0'"
+            (onTabClick)="filter($event)"
+          ></app-tabs-filter>
+        </div> -->
+      </div>
+    </div>
+    <div class="row" *ngIf="alerts.length != 0">
+      <div class="col-lg-4 col-md-4 col-sm-12">
+        <div class="alert-history pt-3 mt-3" *ngIf="activeAlert">
+          <h5>Alert History</h5>
+          <ng-container *ngFor="let alert of alerts">
+            <alert-tab
+              [alert]="alert"
+              [activeAlertId]="activeAlert.id"
+              (onClick)="selectedAlert($event)"
+            ></alert-tab>
+          </ng-container>
+          <p
+            *ngIf="alerts.length < 1"
+            class="d-flex justify-content-center m-5"
+          >
+            No data now ...
+          </p>
+
+          <!-- </ng-container> -->
+        </div>
+        <!-- <p *ngIf="showLoader">loading ...</p> -->
+      </div>
+      <div class="col-lg-8 col-md-8 col-sm-12">
+        <div class="alert-details pt-3">
+          <alert-details [alert]="activeAlert"></alert-details>
+        </div>
+        <!-- <p *ngIf="showLoader">loading ...</p> -->
+      </div>
+    </div>
+
+    <!-- If No alerts Found -->
+    <ng-container *ngIf="alerts.length == 0">
+      <app-no-alert-found></app-no-alert-found>
+    </ng-container>
+  </div>
+</div>

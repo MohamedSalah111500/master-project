@@ -1,0 +1,146 @@
+
+<div class="row">
+  <div class="col-12">
+    <div class="wrapper-card">
+      <div class="header">
+        <h4>Sign Up</h4>
+      </div>
+
+      <form [formGroup]="signupForm" class="needs-validation"  (ngSubmit)="onSubmit()">
+        <!-- // form control start ------> 
+        <div class="form-group mb-3">
+          <label class="form-label" id="fname"> Full Name </label>
+          <input
+            type="text"
+            class="form-control"
+            [class.is-valid]="helpersFunction.isControllerValid(signupForm,'fname')"
+            [class.is-invalid]="helpersFunction.controllerNotValidAndDirty(signupForm,'fname')"
+            formControlName="fname"
+            placeholder="Entre your Full Name"
+            id="fname"
+          />
+          <div class="invalid-feedback" *ngIf="helpersFunction.getErrorByController(signupForm,'fname','minlength')">
+              Name must be at least 4 characters long.
+          </div>
+        </div>
+
+         <!-- // form control start ------> 
+         <div class="form-group mb-3">
+          <label class="form-label" id="email"> Email</label>
+          <input
+            type="text"
+            class="form-control"
+            [class.is-valid]="helpersFunction.isControllerValid(signupForm,'email')"
+            [class.is-invalid]="helpersFunction.controllerNotValidAndDirty(signupForm,'email')"
+            formControlName="email"
+            placeholder="Entre your email"
+            id="email"
+          />
+          <div class="invalid-feedback" *ngIf="helpersFunction.getErrorByController(signupForm,'fname','minlength')">
+              Name must be at least 4 characters long.
+          </div>
+        </div>
+
+        
+
+        <!-- // form control start ------> 
+        <div class="form-group mb-3">
+          <label class="form-label" id="phone">  Phone Number </label>
+          <input
+            type="text"
+            class="form-control"
+            [class.is-valid]="helpersFunction.isControllerValid(signupForm,'phone')"
+            [class.is-invalid]="helpersFunction.controllerNotValidAndDirty(signupForm,'phone')"
+            formControlName="phone"
+            placeholder="Entre your Phone Number"
+            id="phone"
+          />
+          
+          <div class="invalid-feedback" *ngIf="helpersFunction.getErrorByController(signupForm,'phone','minlength')">
+            Phone Number must be  11 characters long.
+          </div>
+        </div>
+
+          <!-- // form control start ------> 
+          <div class="form-group mb-3">
+            <label class="form-label" id="imgUrl"> Image URL </label>
+            <input
+              type="text"
+              class="form-control"
+              [class.is-valid]="helpersFunction.isControllerValid(signupForm,'imgUrl')"
+              [class.is-invalid]="helpersFunction.controllerNotValidAndDirty(signupForm,'imgUrl')"
+              formControlName="imgUrl"
+              placeholder="Entre your image URL"
+              id="imgUrl"
+            />
+          </div>
+
+            <!-- // form control start ------> 
+            <div class="form-group mb-3">
+              <label class="form-label" id="dateOfBirth"> Date Of Birth </label>
+              <input
+                type="date"
+                class="form-control"
+                [class.is-valid]="helpersFunction.isControllerValid(signupForm,'dateOfBirth')"
+                [class.is-invalid]="helpersFunction.controllerNotValidAndDirty(signupForm,'dateOfBirth')"
+                formControlName="dateOfBirth"
+                placeholder="Entre your Date of Birth"
+                id="dateOfBirth"
+              />
+  
+            </div>
+
+            
+            <!-- // form control start ------> 
+            <div class="form-group mb-3">
+              <label class="form-label" id="address"> Address </label>
+              <input
+                type="text"
+                class="form-control"
+                [class.is-valid]="helpersFunction.isControllerValid(signupForm,'address')"
+                [class.is-invalid]="helpersFunction.controllerNotValidAndDirty(signupForm,'address')"
+                formControlName="address"
+                placeholder="Entre your Address"
+                id="address"
+              />
+  
+            </div>
+        
+         <!-- // form control start ------> 
+        <input-toggle-password formControlName="password" [valid]="helpersFunction.isControllerValid(signupForm,'password')" ></input-toggle-password>
+        <div class="invalid-feedback" *ngIf="helpersFunction.getErrorByController(signupForm,'password','minlength')">
+          Password Not match 
+         </div>
+    
+
+         <!-- // form control start ------> 
+         <div class="form-group mb-3">
+          <label class="form-label" id="rePassword">  Re-entre Password </label>
+          <input
+            type="password"
+            class="form-control"
+            [class.is-valid]="helpersFunction.isControllerValid(signupForm,'rePassword')  &&  helpersFunction.controllerVal(signupForm,'password') == helpersFunction.controllerVal(signupForm,'rePassword')"
+            [class.is-invalid]=" helpersFunction.isControllerTouched(signupForm,'rePassword') && helpersFunction.controllerVal(signupForm,'password') != helpersFunction.controllerVal(signupForm,'rePassword')"
+            formControlName="rePassword"
+            placeholder="************"
+            id="rePassword"
+          />
+          
+          <div class="invalid-feedback" *ngIf="helpersFunction.isControllerTouched(signupForm,'rePassword') && helpersFunction.controllerVal(signupForm,'password') != helpersFunction.controllerVal(signupForm,'rePassword')">
+           Password Not match 
+          </div>
+        </div>
+
+    
+        <button type="submit"  [disabled]="!signupForm.valid" class="btn w-100 mx-0 mt-3 submit-btn d-block">
+          Sign Up
+        </button>
+
+      
+        <p class="text-center "> Already have an account? <a routerLink="/auth">Login</a ></p>
+       
+      </form>
+    </div>
+  </div>
+</div>
+

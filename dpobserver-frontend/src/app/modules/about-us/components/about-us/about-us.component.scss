@@ -1,0 +1,293 @@
+@import "src/scss/abstracts/variables";.about-us {
+  margin-top: 5rem;
+  //goals
+  .goals {
+    .imgContainer {
+      width: 100%;
+      height: 500px;
+      padding-inline-end: 30px;
+      @media (max-width: 1200px) {
+        padding-inline-end: 0;
+      }
+      @media (max-width: 767px) {
+        height: 350px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    }
+    .info {
+      @media (max-width: 1200px) {
+        margin-top: 5rem;
+      }
+      .goals-title {
+        text-transform: capitalize;
+        margin-bottom: 3rem;
+        .small-title {
+          font-weight: 500;
+          font-size: 18px;
+          color: $main_color;
+        }
+        .main-title {
+          font-weight: 700;
+          font-size: 40px;
+          color: $dark_color;
+        }
+      }
+      .vision {
+        margin-bottom: 4rem;
+        .title {
+          font-weight: 600;
+          font-size: 20px;
+          color: $charcoal_color;
+          text-transform: capitalize;
+          margin-bottom: 1rem;
+        }
+        .description {
+          font-weight: 400;
+          font-size: 16px;
+          text-transform: capitalize;
+          color: $gull_gray_color;
+          line-height: 1.7;
+        }
+      }
+    }
+  }
+
+  //middel cards
+  .middel-cards {
+    margin-top: 6rem;
+    .item {
+      display: flex;
+      margin-bottom: 6rem;
+      @media (max-width: 767px) {
+        margin-bottom: 3rem;
+        display: block;
+        text-align: center;
+      }
+      .imgContainer {
+        background: $navajo_white_color;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-inline-end: 11px;
+        padding: 15px;
+        @media (max-width: 767px) {
+          width: 80px;
+          height: 80px;
+          margin: 10px auto;
+        }
+        img {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      .info {
+        .title {
+          font-weight: 500;
+          font-size: 20px;
+          color: $mirage_color;
+        }
+        .description {
+          font-weight: 400;
+          font-size: 16px;
+          color: $pale_sky_color;
+        }
+      }
+    }
+  }
+
+  //shell
+  .shell {
+    margin-top: 6rem;
+    display: flex;
+    @media (max-width: 1200px) {
+      > div {
+        &:first-of-type {
+          order: 2;
+        }
+        &:last-of-type {
+          order: 1;
+        }
+      }
+    }
+    .info {
+      text-transform: capitalize;
+      transform: translate(0, 60%);
+      @media (max-width: 1200px) {
+        transform: translate(0, 0);
+        margin-top: 3rem;
+      }
+      .small-title {
+        font-weight: 500;
+        font-size: 18px;
+        color: $main_color;
+      }
+      .main-title {
+        font-weight: 700;
+        font-size: 40px;
+        color: $dark_color;
+      }
+      .description {
+        font-weight: 400;
+        font-size: 16px;
+        text-transform: capitalize;
+        color: $gull_gray_color;
+        line-height: 1.7;
+        margin-top: 2rem;
+      }
+    }
+    .imgContainer {
+      width: 100%;
+      height: 600px;
+      padding-inline-end: 30px;
+      @media (max-width: 1200px) {
+        padding-inline-end: 0;
+      }
+      @media (max-width: 767px) {
+        height: 350px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    }
+  }
+
+  //Why Choose us
+  .choose-us {
+    margin-top: 10rem;
+    @media (max-width: 767px) {
+      margin-top: 6rem;
+    }
+    .imgContainer {
+      width: 100%;
+      height: 650px;
+      @media (max-width: 767px) {
+        height: 350px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+    }
+    .info {
+      margin-top: 3rem;
+      padding-inline-start: 30px;
+      @media (max-width: 1200px) {
+        padding-inline-start: 0;
+        // margin-top: 5rem;
+      }
+      .choose-title {
+        text-transform: capitalize;
+        margin-bottom: 3rem;
+        .small-title {
+          font-weight: 500;
+          font-size: 18px;
+          color: $main_color;
+        }
+        .main-title {
+          font-weight: 700;
+          font-size: 40px;
+          color: $dark_color;
+        }
+      }
+
+      .description {
+        margin-bottom: 2rem;
+        font-weight: 400;
+        font-size: 16px;
+        text-transform: capitalize;
+        color: $gull_gray_color;
+        line-height: 1.7;
+      }
+    }
+    //carousel imgs
+    .silder {
+      padding-inline-start: 3rem;
+      @media (max-width: 1200px) {
+        padding-inline-start: 0;
+      }
+      .carouselBody {
+        position: relative;
+        .buttons {
+          button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            @media (max-width: 767px) {
+              display: none;
+            }
+            i {
+              color: $dark_charcoal_color;
+            }
+          }
+          .btn-prev {
+            position: absolute;
+            top: 47%;
+            z-index: 99;
+            left: -15px;
+            background: $light_silver_color;
+            padding-inline-end: 10px;
+            box-shadow: 0px 1px 3px $dainsboro_color;
+          }
+
+          .btn-next {
+            position: absolute;
+            top: 47%;
+            z-index: 99;
+            right: -15px;
+            background: $light_silver_color;
+            padding-inline-start: 10px;
+            box-shadow: 0px 1px 3px $dainsboro_color;
+          }
+        }
+      }
+    }
+  }
+
+  ::ng-deep .slick-slide {
+    height: 220px;
+    padding: 0 8px;
+    .CourselImgContainer {
+      height: 220px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin-inline-start: auto;
+        border-radius: 12px;
+        @media (max-width: 991px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  ::ng-deep .slick-dots {
+    background: rgba(255, 255, 255, 0.54);
+    width: auto;
+    left: 50%;
+    transform: translate(-50%, 50px);
+    background: $lotion_color;
+    left: 50%;
+    padding: 6px 10px 10px;
+    border-radius: 22px;
+    z-index: 9;
+    margin-bottom: 21px;
+    li button:before {
+      font-size: 14px !important;
+      color: $main_color !important;
+    }
+  }
+}

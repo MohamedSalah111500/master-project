@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+//angular material
+
+// @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+    overflow-x: hidden;
+  }
+  
+  //for placeholder
+  ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #667085;
+    opacity: 1; /* Firefox */
+    font-size: 13px;
+  }
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #667085;
+    font-size: 13px;
+  }
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #667085;
+    font-size: 13px;
+  }
+  

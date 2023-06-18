@@ -1,0 +1,27 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.main-btn {
+  background: $main_color !important;
+  border-radius: 6px !important;
+  padding: 8px 25px !important;
+  color: $white_color !important;
+  font-weight: 400 !important;
+  font-size: 17px !important;
+  text-transform: capitalize;
+  border-color: $main_color;
+  &:hover {
+    color: $white_color !important;
+  }
+}
+
+.btn-outline {
+  @extend .main-btn;
+  background-color: $white-color !important;
+  color: $main_color !important;
+  border: 1px solid $main_color !important;
+  &:hover {
+    color: $white_color !important;
+    background-color: $main_color !important;
+  }
+}

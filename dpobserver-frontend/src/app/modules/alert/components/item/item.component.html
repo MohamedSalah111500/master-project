@@ -1,0 +1,24 @@
+<div class="card d-flex flex-row align-items-center">
+    <div class="card-header">
+      <img [src]="card.defualtImageUrl"  alt="..." />
+    </div>
+    <div class="card-body">
+      <small class="card-title"> {{ card.title }}</small>
+      <p class="card-cat">{{ card.text }}</p>
+      <p class="card-des">Fruits:Lorem Size: (1 kg)</p>
+      
+      <span class="uom"> quantity {{ card.quantity }}</span>
+      <p class="price"> Price <span class="price">$ {{ card.totalPrice }}</span></p>
+
+      <div class="action">
+      
+        <ng-container *ngIf="action !=='false'">
+        <button class="btn btn-primary">
+          <img class="btn-icon" [src]="card.defualtImageUrl" alt="" />
+          <span class="btn-text"> Add </span>
+        </button>
+      </ng-container>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,36 @@
+@import "src/scss/abstracts/variables";
+.container-fluid {
+  padding: 40px;
+}
+
+.hr {
+  height: 1px;
+  background: $main_color;
+  box-shadow: 0 0 1px $main_color;
+  width: 100%;
+  margin: 44px 0;
+}
+
+//title bar
+.title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  .text-container {
+    .small-title {
+      font-weight: 500;
+      font-size: 16px;
+      color: $main_color;
+    }
+    .big-title {
+      font-weight: 700;
+      font-size: 36px;
+      color: $dark_color;
+    }
+  }
+  .btn-container {
+    .btn {
+    }
+  }
+}

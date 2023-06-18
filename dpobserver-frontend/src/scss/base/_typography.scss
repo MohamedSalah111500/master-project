@@ -1,0 +1,75 @@
+@font-face {
+  font-family: SSTArabic;
+  src: url(../../assets/fonts/sst-arabic-medium/sst-arabic-medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: SSTArabic-Roman;
+  src: url(../../assets/fonts/SSTArabicRoman/SSTArabicRoman.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+}
+
+.CardTitle {
+  font-family: SSTArabic;
+  font-size: 24px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.38;
+  letter-spacing: normal;
+}
+
+.Big-Paragraph {
+  font-family: SSTArabic-Roman;
+  font-size: 22px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.45;
+  letter-spacing: normal;
+}
+
+.SectionTitle {
+  font-family: SSTArabic;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.39;
+  letter-spacing: normal;
+}
+
+.DefaultParagraph {
+  font-family: SSTArabic-Roman;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+}
+
+.CardSubTitle {
+  font-family: SSTArabic-Roman;
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.42;
+  letter-spacing: normal;
+}
+
+.SmallSubTitle {
+  font-family: SSTArabic-Roman;
+  font-size: 10px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}

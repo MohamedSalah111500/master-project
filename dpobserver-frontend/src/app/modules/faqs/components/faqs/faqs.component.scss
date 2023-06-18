@@ -1,0 +1,130 @@
+@import "src/scss/abstracts/variables";
+.main-title {
+  margin: 50px 0;
+  @media (min-width: 1200px) {
+    width: 60%;
+  }
+  span {
+    font-weight: 600;
+    font-size: 16px;
+    color: $main_color;
+  }
+  .title {
+    color: $dark_color;
+    font-weight: 700;
+    font-size: 40px;
+  }
+
+  .description {
+    font-weight: 400;
+    font-size: 20px;
+    color: $independence_color;
+  }
+}
+
+.customer {
+  margin-top: 70px;
+  .customer-title {
+    font-weight: 500;
+    font-size: 28px;
+    color: $charcoal_color;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+  }
+  .info {
+    padding-inline-end: 20px;
+    @media (max-width: 991px) {
+      padding-inline-end: 0;
+    }
+    .item {
+      margin-bottom: 40px;
+      .title {
+        display: flex;
+        align-items: center;
+        .icon {
+          border: 6px solid $pale_cornflower_color;
+          padding: 5px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: $french_sky_blue_color;
+          img {
+            height: 17px;
+            object-fit: contain;
+          }
+        }
+        .text {
+          font-weight: 600;
+          font-size: 20px;
+          margin-inline-start: 10px;
+          color: $dark_color;
+          &::first-letter {
+            text-transform: capitalize;
+          }
+        }
+      }
+      .description {
+        font-weight: 400;
+        font-size: 16px;
+        color: $independence_color;
+        margin-inline-start: 49px;
+        &::first-letter {
+          text-transform: capitalize;
+        }
+      }
+    }
+  }
+  .imageContainer {
+    height: 569px;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    @media (max-width: 767px) {
+      height: 369px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+  }
+}
+
+.second {
+  > div {
+    &:first-of-type {
+      order: 2;
+    }
+    &:last-of-type {
+      order: 1;
+    }
+  }
+
+  @media (max-width: 991px) {
+    > div {
+      &:first-of-type {
+        order: 1;
+      }
+      &:last-of-type {
+        order: 2;
+      }
+    }
+  }
+
+  .customer-title {
+    padding-inline-start: 20px;
+    @media (max-width: 991px) {
+      padding-inline-start: 0;
+    }
+  }
+  .info {
+    padding-inline-end: 0 !important;
+    padding-inline-start: 20px;
+    @media (max-width: 991px) {
+      padding-inline-start: 0;
+    }
+  }
+}

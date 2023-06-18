@@ -1,0 +1,83 @@
+{
+  "HEADER": {
+    "About": "عن الهيئة",
+    "MediaCenter": {
+      "MediaCenter": "مركز الوسائط",
+      "news": "الاخبار",
+      "internalnews":"الاعلانات",
+      "announcements": "التعاميم",
+      "media": "وسائل الإعلام",
+      "Details": "التفاصيل",
+      "GAZT_MAGAZINE": "مجلة الزكاة و الدخل"
+    },
+    "eLibrary": {
+      "eLibrary": "المكتبة الإلكترونية",
+      "DOCUMENTS_LIBRARY": "مكتبة المستندات"
+    },
+    "GaztAcademy": {
+      "GaztAcademy": "أكادمية الهيئة",
+      "offers": "العروض",
+      "academy": "أكادمي"
+    },
+    "KnowledgeBase": {
+      "KnowledgeBase": "مركزالمعلومات",
+      "knowledge": "المعرفه"
+    },
+    "searchPlaceholder": "عما تبحث ؟"
+  },
+  "HOME": {
+    "HOME": "الرئيسية",
+    "Print": "طباعة",
+    "Share": "مشاركة",
+    "Favorite": "المفضلة",
+    "unFavorite": "الغاء المفضلة",
+    "FullDetails": "كامل التفاصيل",
+    "Welcome": "مرحباً",
+    "LatestUpdates": "آخر التحديثات",
+    "OurEvents": "فعاليتنا",
+    "Showing": "الظاهر",
+    "ShowMore": "اظهار المزيد",
+    "of": "من",
+    "DAILY_QUOTES": "أقوال يومية"
+  },
+  "NEWS": {
+    "news": "الاخبار",
+    "newsCute": "نحن هنا لمساعدك في اي شيء تحتاجة ..",
+    "placeholder": "ابحث عن الأخبار هنا!",
+    "LatestNews": "اخر الاخبار",
+    "FavoriteNews": "الاخبار المفضلة",
+    "noFavoriteNews": "There is no favorite Internal News yet"
+  },
+  "INTERNALNEWS": {
+    "FavoriteINTERNALNEWS": "اخر الاعلانات",
+    "AllINTERNALNEWS": "كل الاعلانات"
+  },
+
+  "ANNOUNCEMENTS": {
+    "ANNOUNCEMENTS": "التعاميم",
+    "placeholder": "ابحث عن الإعلانات هنا!",
+    "Latest": "اخر الإعلانات",
+    "Favorite": "الإعلانات المفضلة",
+    "Attachements": "المرفقات"
+  },
+  "NoResultFound": {
+    "NoResultFound": "لا توجد نتائج",
+    "Sorry": "عذرا ، لا توجد نتيجة لهذا البحث ، يرجى المحاولة بكلمة أخرى ",
+    "Clear": "مسح البحث",
+    "OR": "او"
+  },
+  "INTERNAL_NEWS": "أخبار داخلية",
+  "LATEST": "اخر تحديث",
+  "MAGAZINE": {
+    "GAZT_MAGAZINE": "مجلة الزكاة و الدخل",
+    "SEARCH_PLACEHOLDER": "وصف مشكلتك !",
+    "LAST_UPDATE_ON": "آخر تحديث في",
+    "ISSUE_YEAR": "سنة الإصدار",
+    "ISSUE": "الإصدار"
+  },
+  "DOCUMENT_LIBRARY": {
+    "DOCUMENT_LIBRARY": "مكتبة المستندات",
+    "LAST_UPDATE_ON": "آخر تحديث في",
+    "SEARCH_PLACEHOLDER": "وصف مشكلتك !"
+  }
+}
