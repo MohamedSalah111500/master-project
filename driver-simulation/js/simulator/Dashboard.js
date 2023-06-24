@@ -114,7 +114,6 @@ export default class Dashboard {
     this.stationDom.textContent = station !== null ? station.toLocaleString(undefined, { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : '—';
 
     this.latitudeDom.textContent = latitudeText;
-    console.log(latitude,'latitude')
 
     this.updatePlanTime(planTime);
 

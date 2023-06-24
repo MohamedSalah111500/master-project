@@ -1,20 +1,27 @@
-// imports from libs
-const express = require("express");
-const { body } = require("express-validator");
+
+const express = require('express');
+const {
+  getCarValidator,
+  createCarValidator,
+  updateCarValidator,
+  deleteCarValidator,
+} = require('../utils/validators/carValidator');
+
+const {
+  getCars,
+  getCar,
+  createCar,
+  updateCar,
+  deleteCar,
+} = require('../controllers/car');
 
 const router = express.Router();
 
-const carsController = require("../controllers/car");
-
-router.get("/get-all", carsController.getAllCars);
-
-router.post(
-  "/create-car",
-  [
-    body("label").trim().isLength({ min: 5 }),
-    body("location").trim().isLength({ min: 5 }),
-  ],
-  carsController.postCreateCar
-);
+router.route('/').get(getCars).post(createCarValidator, createCar);
+router
+  .route('/:id')
+  .get(getCarValidator, getCar)
+  .put(updateCarValidator, updateCar)
+  .delete(deleteCarValidator, deleteCar);
 
 module.exports = router;

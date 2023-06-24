@@ -10,7 +10,7 @@ export const ABOUT_US_API = `/${environment.apiSupportedVersions}/AboutUsPage/ge
 
 
 //About-us APIs
-export const ALERT_LIST = `/alert/get-all`;
+export const ALERT_LIST = `/api/v1/alert`;
 
 //FAQs APIs
 export const Get_FAQs_API = `/${environment.apiSupportedVersions}/FAQPage/get-FAQ`;

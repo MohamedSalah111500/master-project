@@ -14,7 +14,7 @@ export class AlertTabComponent {
 
   alertClick(): void {
     console.log(this.alert)
-   this.activeAlertId = this.alert?.id;
+   this.activeAlertId = this.alert?.ـid;
     this.onClick.emit(this.alert);
   }
 }

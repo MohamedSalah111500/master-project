@@ -15,7 +15,7 @@ exports.createAlertValidator = [
     .isLength({ max: 32 })
     .withMessage('Too long Alert label')
   ,
-  validatorMiddleware,
+  validatorMiddleware
 ];
 
 exports.updateAlertValidator = [

@@ -42,5 +42,16 @@ const alertSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+// Mongoose query middleware
+alertSchema.pre(/^find/, function (next) {
+  this.populate({
+    path: 'driver',
+    // select: 'name -_id',
+  });
+  this.populate({
+    path: 'car'  });
+  next();
+});
+
 // 2- Create model
 module.exports = mongoose.model("Alert", alertSchema);

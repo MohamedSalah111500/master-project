@@ -25,7 +25,7 @@ const driverSchema = new mongoose.Schema(
 
     dateOfBirth: {
       type: Date,
-      required: [true, "location required"],
+      required: [true, "dateOfBirth required"],
     },
     description: {
       type: String,

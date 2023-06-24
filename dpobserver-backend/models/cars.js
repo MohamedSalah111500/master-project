@@ -18,10 +18,10 @@ const carSchema = new mongoose.Schema(
       required: [true, "model required"],
     },
     version: {
-      type: String,
-      required: [true, "version required"],
+      type: String
     },
     driver: {
+     
       type: mongoose.Schema.ObjectId,
       ref: "Driver",
       required: [true, "car must be belong to driver"],

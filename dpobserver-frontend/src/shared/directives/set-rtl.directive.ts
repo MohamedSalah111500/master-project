@@ -14,7 +14,6 @@ export class SetRtlDirective {
 
   switchElementDirection() {
      let language=this.translationService.getCurrentLanguage();
-     console.log(language);
        switch (language) {
         case LangEnum.english:
           this.renderer.removeClass(document.body, 'rtl');

@@ -10,7 +10,7 @@
           ></alert-status>
 
           <strong>{{ alert?.label }} </strong>
-          {{ alert?.date | date : "M/d/yy, h:mm a" }}
+          {{ alert?.createdAt | date : "M/d/yy, h:mm a" }}
         </p>
         <p class="location">
           {{ alert?.location }}

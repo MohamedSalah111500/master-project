@@ -7,13 +7,13 @@ dotenv.config({ path: 'config.env' });
 
 // Routes
 const alertRoute = require('./routes/alerts');
+const carRoute = require('./routes/cars');
+const driverRoute = require('./routes/drivers')
+
+
 
 const dbConnection = require("./config/database");
 const bodyParser = require("body-parser");
-// const driversRouts = require("./routes/drivers");
-// const carsRouts = require("./routes/cars");
-// const usersRouts = require("./routes/users");
-const alertsRouts = require("./routes/alerts");
 
 app.use(bodyParser.json());
 app.use((req, res, next) => {
@@ -34,6 +34,10 @@ dbConnection();
 
 // Mount Routes
 app.use('/api/v1/alert', alertRoute);
+app.use('/api/v1/car', carRoute);
+app.use('/api/v1/driver', driverRoute);
+
+
 // app.use('/api/v1/subcategories', subCategoryRoute);
 // app.use('/api/v1/brands', brandRoute);
 // app.use('/api/v1/products', productRoute);

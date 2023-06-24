@@ -14,6 +14,6 @@ export class AlertService {
   ) {}
 
   getAllDrivers(): Observable<any> {
-    return this._getXhrService.getData(`${ALERT_LIST}`);
+    return this._getXhrService.getData(`${ALERT_LIST}?sort=-createdAt`);
   }
 }

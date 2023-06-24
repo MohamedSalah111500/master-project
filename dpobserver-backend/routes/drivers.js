@@ -1,17 +1,27 @@
-// imports from libs
-const express = require("express");
-const { body } = require("express-validator");
+
+const express = require('express');
+const {
+  getDriverValidator,
+  createDriverValidator,
+  updateDriverValidator,
+  deleteDriverValidator,
+} = require('../utils/validators/driverValidator');
+
+const {
+  getDrivers,
+  getDriver,
+  createDriver,
+  updateDriver,
+  deleteDriver,
+} = require('../controllers/driver');
 
 const router = express.Router();
 
-const driversController = require("../controllers/driver");
-
-router.get("/get-all", driversController.getAllDrivers);
-
-router.post(
-  "/create-driver",
-  [body("label").trim().isLength({ min: 5 }),body("location").trim().isLength({ min: 5 })],
-  driversController.postCreateDriver
-);
+router.route('/').get(getDrivers).post(createDriverValidator, createDriver);
+router
+  .route('/:id')
+  .get(getDriverValidator, getDriver)
+  .put(updateDriverValidator, updateDriver)
+  .delete(deleteDriverValidator, deleteDriver);
 
 module.exports = router;

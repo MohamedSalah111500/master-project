@@ -1,49 +1,28 @@
-const { validationResult } = require("express-validator");
-const Driver = require("../models/driver");
-const api = require("../utils/API/driverApi");
 
-exports.postCreateDriver = (req, res, next) => {
-  const { name, phone, email, dateOfBirth, address, image, licenseType,driverId } =
-    req.body;
-  Driver.create({
-    email,
-    address,
-    dateOfBirth,
-    name,
-    phone,
-    image,
-    licenseType,
-    driverId
-  })
-    .then((res) => {
-      console.log(res);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-};
+const factory = require('./handlersFactory');
+const Driver = require('../models/driver');
 
-exports.getAllDrivers = (req, res, next) => {
-  api
-    .fetchAllDrivers()
-    .then((response) => {
-      res.status(200).json(response);
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(401).json({ message: err });
-    });
-};
+// @desc    Get list of Driver
+// @route   GET /api/v1/Driver
+// @access  Public
+exports.getDrivers = factory.getAll(Driver);
 
-exports.getDriverById = (req, res, next) => {
-  const DriverId = req.params.id;
-  // Website you wish to allow to connect
-  api
-    .fetchDriverById(DriverId)
-    .then((response) => {
-      res.status(200).json(response);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-};
+// @desc    Get specific Driver by id
+// @route   GET /api/v1/Drivers/:id
+// @access  Public
+exports.getDriver = factory.getOne(Driver);
+
+// @desc    Create Driver
+// @route   POST  /api/v1/Drivers
+// @access  Private
+exports.createDriver = factory.createOne(Driver);
+
+// @desc    Update specific Driver
+// @route   PUT /api/v1/Drivers/:id
+// @access  Private
+exports.updateDriver = factory.updateOne(Driver);
+
+// @desc    Delete specific Driver
+// @route   DELETE /api/v1/Drivers/:id
+// @access  Private
+exports.deleteDriver = factory.deleteOne(Driver);
