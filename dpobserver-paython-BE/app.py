@@ -1,5 +1,5 @@
 
-from flask import Flask, request, jsonify
+from flask import Flask, request
 import json
 import clusters as cls
 
@@ -19,11 +19,13 @@ def update_record():
     content_type = request.headers.get('Content-Type')
     if (content_type == 'application/json'):
         jsonRes = request.json
+        app.logger.info('Body: %s', request.json)
         result = cls.predict(jsonRes['data'])
+        print(result)
         return json.dumps(result)
     else:
         return 'Content-Type not supported!'
 
 
 if __name__ == "__main__":
-    app.run(host='127.0.0.1')
+    app.run(host='127.0.0.1',port=5000)

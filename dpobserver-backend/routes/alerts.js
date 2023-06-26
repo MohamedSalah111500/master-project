@@ -1,10 +1,12 @@
 
 const express = require('express');
+
 const {
   getAlertValidator,
   createAlertValidator,
   updateAlertValidator,
   deleteAlertValidator,
+  calcDriverPatternByAIModel,
 } = require('../utils/validators/alertValidator');
 
 const {
@@ -17,7 +19,7 @@ const {
 
 const router = express.Router();
 
-router.route('/').get(getAlerts).post(createAlertValidator, createAlert);
+router.route('/').get(getAlerts).post(createAlertValidator, calcDriverPatternByAIModel, createAlert);
 router
   .route('/:id')
   .get(getAlertValidator, getAlert)

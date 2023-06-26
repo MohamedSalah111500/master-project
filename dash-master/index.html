@@ -1013,14 +1013,14 @@
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            label: "New ubnormal Driving",
+            label: "Alert",
             address: "Egypt, Cairo",
             status: "1",
             location: "Cairo ,Egypt",
             car: '6490e1d138ce15dc80f31814',
             driver: '649364d2fd0a6f1a3648546c',
-            dangerPercentage: "97",
-            drivePattern: { data: data },
+            dangerPercentage: 0,
+            drivePattern: data ,
             description:
               "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
           }),
@@ -1029,7 +1029,7 @@
             // downloadHuddler();
 
             response.json();
-             window.parent.location.href = "http://localhost:4200/alert";
+           window.parent.location.href = "http://localhost:4200/alert";
           })
           .then((response) => console.log(JSON.stringify(response)));
       }
