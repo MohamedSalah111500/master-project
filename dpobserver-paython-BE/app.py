@@ -1,7 +1,7 @@
 
 from flask import Flask, request
 import json
-import clusters as cls
+from clusters import clustring_result as cls
 
 
 
@@ -20,7 +20,7 @@ def update_record():
     if (content_type == 'application/json'):
         jsonRes = request.json
         app.logger.info('Body: %s', request.json)
-        result = cls.predict(jsonRes['data'])
+        result = cls(jsonRes['data'])
         print(result)
         return json.dumps(result)
     else:
