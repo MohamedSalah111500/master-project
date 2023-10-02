@@ -1,0 +1,50 @@
+[
+  {
+    "label": "Alert From Cairo Ara",
+    "dangerPercentage": 0.6,
+    "status": "2",
+    "location": "512366,964524",
+    "address": "Cairo, st 32",
+    "description": "Monterail collects and processes personal data in accordance with applicable data protection laws.If you are a European Job Applicant see the privacy notice for further details.",
+    "drivePattern": [
+      [1, 2],
+      [1, 0],
+      [1, 2],
+      [1, 2]
+    ],
+    "driver": "64a5c5fdb59ae9c9c18cd9cb",
+    "car": "64a5bd8af434418632b5cded"
+  },
+  {
+    "label": "Alert Maadi Ara",
+    "dangerPercentage": 0,
+    "status": "2",
+    "location": "512366,964524",
+    "address": "Cairo, st 32",
+    "description": "Monterail collects and processes personal data in accordance with applicable data protection laws.If you are a European Job Applicant see the privacy notice for further details.",
+    "drivePattern": [
+      [1, 2],
+      [1, 0],
+      [1, 2],
+      [1, 2]
+    ],
+    "driver": "64a5c152f434418632b5cdfe",
+    "car": "64a5be00f434418632b5cdef"
+  },
+  {
+    "label": "Cairo Alert ",
+    "dangerPercentage": 0.9,
+    "status": "2",
+    "location": "512366,964524",
+    "address": "Cairo, st 32",
+    "description": "Monterail collects and processes personal data in accordance with applicable data protection laws.If you are a European Job Applicant see the privacy notice for further details.",
+    "drivePattern": [
+      [1, 2],
+      [1, 0],
+      [1, 2],
+      [1, 2]
+    ],
+    "driver": "64a5c1b9f434418632b5ce02",
+    "car": "64a5be39f434418632b5cdf1"
+  }
+]

@@ -40,11 +40,16 @@ exports.calcDriverPatternByAIModel = (req, res, next) => {
       'Content-Type': 'application/json'
     },
     body: JSON.stringify({ "data": req.body.drivePattern })
+   
   })
     .then(response => response.json())
     .then(response => {
-      req.body.dangerPercentage = calcPrediction(response),
-      req.body.label = calcPrediction(response) == 0 ? 'Normal Driving' : 'Abnormal Driving',
+      console.log(response,'response')
+      req.body.dangerPercentage = +response,
+      req.body.car= "64a5bd8af434418632b5cded";
+      req.body.driver= "64a5c1b9f434418632b5ce02"; 
+      // req.body.dangerPercentage = calcPrediction(response),
+      req.body.label = response == 0 ? 'Normal Driving' : 'Abnormal Driving',
       next()
     }
     )

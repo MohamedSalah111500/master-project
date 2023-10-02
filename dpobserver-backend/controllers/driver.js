@@ -18,7 +18,7 @@ exports.getDriver = factory.getOne(Driver);
 exports.createDriver = factory.createOne(Driver);
 
 // @desc    Update specific Driver
-// @route   PUT /api/v1/Drivers/:id
+// @route   PUT /api/v1/Driver/:id
 // @access  Private
 exports.updateDriver = factory.updateOne(Driver);
 

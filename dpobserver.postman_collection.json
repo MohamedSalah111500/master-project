@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "1cc76d62-10b4-41bd-ac48-44f55d8bc47b",
+		"name": "dpobserver",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9356628"
+	},
+	"item": [
+		{
+			"name": "alert",
+			"item": [
+				{
+					"name": "get all alerts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/alert",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"alert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create alert",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"label\":\"New Alert2\",\n    \"dangerPercentage\":30,\n    \"status\":\"2\",\n    \"location\":\"512366,964524\",\n    \"address\":\"Cairo, st 32\",\n    \"description\":\"test description\",\n    \"drivePattern\":[[1,2],[1,2],[1,2],[1,2]],\n    \"driver\":\"649364d2fd0a6f1a3648546c\",\n    \"car\":\"64936528b14dc924f097ea9f\"\n\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/alert",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"alert"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete alert",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/api/v1/alert/649788ba38b3405e0007e3b1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"alert",
+								"649788ba38b3405e0007e3b1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "car",
+			"item": [
+				{
+					"name": "get all cars",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/car",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"car"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create new car",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\":\"Tesla\",\n    \"image\":\"https://car-images.bauersecure.com/wp-images/4627/polestar4_500.jpg\",\n    \"model\":\"2016\",\n    \"version\":\"Tesla Model\",\n    \"driver\":\"649364d2fd0a6f1a3648546c\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/v1/car",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"car"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete single car",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\":\"opel\",\n    \"image\":\"https://cdn.euroncap.com/media/68932/opel-vauxhall-astra.png\",\n    \"model\":\"2016\",\n    \"version\":\"Astra\",\n    \"driver\":\"649364d2fd0a6f1a3648546c\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}api/v1/car/6490e1d138ce15dc80f31814",
+							"host": [
+								"{{baseURL}}api"
+							],
+							"path": [
+								"v1",
+								"car",
+								"6490e1d138ce15dc80f31814"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "driver",
+			"item": [
+				{
+					"name": "get all drivers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/drivers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"drivers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete driver",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/drivers/649364d2fd0a6f1a3648546c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"drivers",
+								"649364d2fd0a6f1a3648546c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update driver",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Mohamed Salah 5\",\n    \"phone\": \"+20189654554\",\n    \"email\": \"Mohamed@So.com\",\n    \"status\": \"normail\",\n    \"image\": \"https://img.freepik.com/free-photo/photo-serious-handsome-guy-posing-against-white-wall_273609-20462.jpg\",\n    \"dateOfBirth\": \"06-03-1996\",\n    \"licenseType\": \"personal\",\n    \"address\": \"Cairo,Egypt\",\n    \"description\": \"Good Man\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/driver/64a5c5fdb59ae9c9c18cd9cb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"driver",
+								"64a5c5fdb59ae9c9c18cd9cb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create new driver",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Mohamed Salah\",\n    \"phone\": \"+201027792254\",\n    \"email\": \"Mohamed@Salah.com\",\n    \"status\": \"normail\",\n    \"image\": \"https://cdn.euroncap.com/media/68932/opel-vauxhall-astra.png\",\n    \"dateOfBirth\": \"06-03-1996\",\n    \"licenseType\": \"personal\",\n    \"address\": \"Fayoum, Egypt\",\n    \"description\": \"Good Man\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/driver",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"driver"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
