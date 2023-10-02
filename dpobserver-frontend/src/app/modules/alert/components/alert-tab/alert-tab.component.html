@@ -15,7 +15,7 @@
     </p>
     <p class="location">
       {{ alert?.location }}
-      <span class="danger"> Danger {{ alert?.dangerPercentage }}%</span>
+      <span class="danger">  {{ alert?.dangerPercentage == 0 ? 'No Danger' : 'Danger ' }}</span>
     </p>
     <p class="description">
       {{ alert?.description | slice : 0 : 150 }}
