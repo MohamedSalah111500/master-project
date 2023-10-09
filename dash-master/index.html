@@ -4,6 +4,15 @@
     <link rel="stylesheet" href="vendor/bulma.min.css" />
     <link rel="stylesheet" href="css/dash.css" />
     <meta charset="utf-8" />
+    <style>
+      #wheel {
+    width: 100px;
+    height: 100px;
+    background-image: url('https://purepng.com/public/uploads/large/purepng.com-steering-wheelsteering-wheelcar-wheelcar-steeringwheels-1701527615282rv9mp.png') !important;
+    background-color: #7fffd400;
+    background-size: contain;
+  }
+    </style>
   </head>
   <body>
     <div id="container">
@@ -645,8 +654,10 @@
         </div>
       </div>
       <div id="cameras" class="gui-box sim-mode-box">
-        <button type="button" onclick="createAlertHuddler()">Create Alert</button>
-        <br/>
+        <button type="button" onclick="createAlertHuddler()">
+          Create Alert
+        </button>
+        <br />
 
         <button type="button" onclick="downloadHuddler()">down</button>
         <a id="downloadAnchorElem" style="display:none">down</a>
@@ -984,7 +995,7 @@
     <script>
       var speed;
       var latitude;
-
+      var startBrake = false;
       var planTime;
 
       function selectors() {
@@ -997,12 +1008,15 @@
         selectors();
         speed = document.getElementById("speed").innerText;
         if (speed !== "0.0" && planTime !== "—") {
-          data.push([+latitude, +speed]);
+          let brake = startBrake ? 1 : 0
+          data.push([+latitude, +speed,brake]);
+
         }
         if (speed == "0.0" && planTime !== "—" && data.length > 10) {
           createAlertHuddler();
           data = [];
         }
+        console.log(data)
       }, 1000);
 
       function createAlertHuddler() {
@@ -1017,10 +1031,10 @@
             address: "Egypt, Cairo",
             status: "1",
             location: "Cairo ,Egypt",
-            car: '6490e1d138ce15dc80f31814',
-            driver: '649364d2fd0a6f1a3648546c',
+            car: "6490e1d138ce15dc80f31814",
+            driver: "649364d2fd0a6f1a3648546c",
             dangerPercentage: 0,
-            drivePattern: data ,
+            drivePattern: data,
             description:
               "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
           }),
@@ -1029,7 +1043,7 @@
             // downloadHuddler();
 
             response.json();
-           window.parent.location.href = "http://localhost:4200/alert";
+            window.parent.location.href = "http://localhost:4200/alert";
           })
           .then((response) => console.log(JSON.stringify(response)));
       }
@@ -1044,12 +1058,26 @@
         dlAnchorElem.click();
       }
 
-      
       function createAlert() {
         var dlAnchorElem = document.getElementById("createAlertElem");
         dlAnchorElem.click();
         createAlertHuddler();
       }
+
+      document.onkeypress = function(e) {
+        e = e || window.event;
+        if(e.keyCode=115){
+          startBrake = true
+        }
+      };
+
+      document.onkeyup = function(e) {
+        e = e || window.event;
+        if(e.keyCode=115){
+          startBrake = false
+        }
+       
+      };
     </script>
 
     <script defer src="vendor/fontawesome-all.js"></script>
