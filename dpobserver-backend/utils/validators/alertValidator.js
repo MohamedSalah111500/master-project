@@ -48,7 +48,7 @@ exports.calcDriverPatternByAIModel = (req, res, next) => {
       response = response.includes("1") ? 1 : 0
       req.body.dangerPercentage = +response,
       req.body.car= "64a5bd8af434418632b5cded";
-      req.body.driver= "64a5c1b9f434418632b5ce02"; 
+      req.body.driver= "64a5c530e02673406f86e5f2"; 
       // req.body.dangerPercentage = calcPrediction(response),
       req.body.label = response == 0 ? 'Normal Driving' : 'Abnormal Driving',
       next()
