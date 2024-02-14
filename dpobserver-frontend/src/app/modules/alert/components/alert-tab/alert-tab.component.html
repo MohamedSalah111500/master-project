@@ -1,11 +1,18 @@
 <div
   class="alert-tab-wrapper d-flex justify-content-between"
   [class.active]="activeAlertId === alert.id"
+  [class.danger-drive]=" alert?.dangerPercentage == 1"
+  [class.normal-drive]=" alert?.dangerPercentage == 0"
   (click)="alertClick()"
 >
   <div class="info">
+    <p class="great-job m-0" *ngIf="alert?.dangerPercentage == 0" >Great Job 
+      <i class="fa fa-check-circle"></i>
+    </p>
     <p class="title">
+     
       <alert-status
+      *ngIf="alert?.dangerPercentage == 1"
         [status]="alert.status"
         [progress]="alert.progress"
         svg="false"
@@ -15,7 +22,7 @@
     </p>
     <p class="location">
       {{ alert?.location }}
-      <span class="danger">  {{ alert?.dangerPercentage == 0 ? 'No Danger' : 'Danger ' }}</span>
+      <span class="danger">  {{ alert?.dangerPercentage == 0 ? 'No Danger' : 'Danger' }}</span>
     </p>
     <p class="description">
       {{ alert?.description | slice : 0 : 150 }}

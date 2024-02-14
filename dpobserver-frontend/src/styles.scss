@@ -29,3 +29,19 @@ body {
     font-size: 13px;
   }
   
+  .danger-drive {
+    border-left: 5px solid #fd4242!important;
+    strong,span,.danger {
+      color: red !important;
+    }
+  }
+  
+  .normal-drive {
+    strong,span,.danger {
+    }
+  }
+  
+  .great-job{
+    font-size: 12px;
+    color: green;
+  }

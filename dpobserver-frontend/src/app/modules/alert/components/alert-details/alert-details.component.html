@@ -1,9 +1,16 @@
 <div class="alert-details-wrapper" *ngIf="alert">
-  <div class="alert-details">
+  <div class="alert-details border-0"
+  [class.danger-drive]=" alert?.dangerPercentage == 1"
+  [class.normal-drive]=" alert?.dangerPercentage == 0"
+  >
     <div class="alert-tab-wrapper d-flex justify-content-between">
       <div class="info">
+        <p class="great-job m-0 fs-5" *ngIf="alert?.dangerPercentage == 0" >Great Job 
+          <i class="fa fa-check-circle"></i>
+        </p>
         <p class="title">
           <alert-status
+          *ngIf="alert?.dangerPercentage == 1"
             [status]="alert.status"
             [progress]="alert.progress"
             svg="false"
