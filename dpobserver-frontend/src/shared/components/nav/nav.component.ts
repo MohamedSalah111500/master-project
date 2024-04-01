@@ -57,7 +57,7 @@ export class NavComponent implements OnInit {
       return JSON.parse(userData);
     } else {
       return {
-        image: 'assets/images/nav/user.png',
+        image: 'https://media.licdn.com/dms/image/D4E03AQHA23dgm2n7gQ/profile-displayphoto-shrink_800_800/0/1702244165133?e=1713398400&v=beta&t=WsdBsfzaqG8dLpRv-ND1uC7pqwAOwZ5sk6vCapyPMms',
       };
     }
   }
