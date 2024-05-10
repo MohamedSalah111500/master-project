@@ -28,7 +28,7 @@ scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
 # Define the window size and create sequences
-window_size = 6  # Number of time steps in a sequence
+window_size = 9  # Number of time steps in a sequence
 
 # Function to create sequences
 def create_sequences(X, y, window_size):
@@ -93,4 +93,4 @@ for model in models:
     model.compile(optimizer=Adam(learning_rate=0.001, clipvalue=1.0), loss='binary_crossentropy', metrics=['accuracy'])
     model.fit(X_train, y_train, epochs=20, validation_data=(X_val, y_val), callbacks=[early_stopping], verbose=1)
     loss, accuracy = model.evaluate(X_val, y_val, verbose=0)
-    print(f"{model.name} Validation Accuracy: {accuracy*100:.2f}%")
+    print(f"window size{window_size}-{model.name} Validation Accuracy: {accuracy*100:.2f}%")
